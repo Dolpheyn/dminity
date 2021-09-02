@@ -61,7 +61,7 @@ Tree_house, Towel, Porch, Wine_rack, Jacuzzi
 
 <details>
 
-  <summary>2020-08-29 - Environment setup</summary>
+  <summary>2021-08-29 - Environment setup</summary>
 
   Created a
   [notebook](https://colab.research.google.com/drive/14ISeuv3frabPFo2F-giIzZdPr2dukmLW#scrollTo=tIE5_pB4IeG6)
@@ -87,7 +87,7 @@ Tree_house, Towel, Porch, Wine_rack, Jacuzzi
 
 <details>
 
-  <summary>2020-08-31 - Trained with 1 class and setup for experimentation</summary>
+  <summary>2021-08-31 - Trained with 1 class and setup for experimentation</summary>
 
   Trained using the notebook with the bathtub dataset. Confirmed that 640x640 is
   the correct input size for the model.
@@ -164,7 +164,7 @@ Tree_house, Towel, Porch, Wine_rack, Jacuzzi
 
 <details>
 
-  <summary>2020-09-02 - Download 200 training images from each class</summary>
+  <summary>2021-09-02 - Download 200 training images from each class</summary>
 
   08:30 -- Tried uploading the first 10 classes to roboflow with no limit (16275 train,
   1124 test, 280 validation). Browser kept going out of memory.
