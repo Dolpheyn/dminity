@@ -215,3 +215,19 @@ Tree_house, Towel, Porch, Wine_rack, Jacuzzi
   14:17 -- Done for the day.
 
 </details>
+
+<details>
+
+  <summary>2021-09-07 - Setup Repository</summary>
+
+   ```
+   . dminity/
+   |__ dataset/
+   | |__ download-custom-openimage-dataset.ipynb
+   |__ train/
+   | |__ experiment-yolox-variants.ipynb
+   |__ deploy/ #TODO
+   ```
+
+
+</details>
