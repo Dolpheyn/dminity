@@ -231,3 +231,22 @@ Tree_house, Towel, Porch, Wine_rack, Jacuzzi
 
 
 </details>
+
+<details>
+
+  <summary>2021-09-08 - Explore Code, create call graph viz</summary>
+
+  - [ ] Setup weights and biases in my [fork of the YOLOX repo](https://github.com/dolpheyn/YOLOX)
+
+  ## Notes
+
+  [draw io call graph for train](https://drive.google.com/file/d/1R-jK3SI4jDa73exhMATZGUfo2-oiHKwv/view?usp=sharing)
+
+  If we give `--fp16` arg when executing `train.py`, it will adopt [mixed precision training](https://docs.nvidia.com/deeplearning/performance/mixed-precision-training/index.html)
+  that will decrease memory usage and bandwith resulting to speed up in training.
+
+  To show more things in tensorboard, add metrics to SummaryWriter
+  (self.tblogger) in `yolox/core/trainer.py` in `Trainer::after_epoch` 
+  [on this line](https://github.com/roboflow-ai/YOLOX/blob/main/yolox/core/trainer.py#L213)
+
+</details>
