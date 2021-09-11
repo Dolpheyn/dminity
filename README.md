@@ -234,9 +234,9 @@ Tree_house, Towel, Porch, Wine_rack, Jacuzzi
 
 <details>
 
-  <summary>2021-09-08 - Explore Code, create call graph viz</summary>
+  <summary>2021-09-08 - Explore YOLOX Code, create call graph viz</summary>
 
-  - [ ] Setup weights and biases in my [fork of the YOLOX repo](https://github.com/dolpheyn/YOLOX)
+  - [ ] Setup ~weights and biases~ tensorboard in my [fork of the YOLOX repo](https://github.com/dolpheyn/YOLOX)
 
   ## Notes
 
@@ -248,5 +248,49 @@ Tree_house, Towel, Porch, Wine_rack, Jacuzzi
   To show more things in tensorboard, add metrics to SummaryWriter
   (self.tblogger) in `yolox/core/trainer.py` in `Trainer::after_epoch` 
   [on this line](https://github.com/roboflow-ai/YOLOX/blob/main/yolox/core/trainer.py#L213)
+
+</details>
+
+<details>
+
+  <summary>2021-09-11 - Explore YOLOX eval code</summary>
+
+  Found where to add more scalar to tensorboard SummaryWriter (in
+  `Trainer::evaluate_and_save_model`).
+
+  Need to know where to get all the missing metrics in order to write to tb
+  every epoch.
+
+  Missing metrics:
+
+  - [ ] `train/box_loss`
+  - [ ] `train/obj_loss`
+  - [ ] `train/cls_loss`
+  - [ ] `metrics/precision`
+  - [ ] `metrics/recall`
+  - [ ] `val/box_loss`
+  - [ ] `val/obj_loss`
+  - [ ] `val/cls_loss`
+  - [ ] `x/lr0`
+  - [ ] `x/lr1`
+  - [ ] `x/lr2`
+
+  What are dem losses?
+
+  `box_loss` is a loss that measures how "tight" the predicted bounding boxes
+  are to the ground truth object (usually a regression loss, L1, smoothL1 etc.).
+
+  `cls_loss` a loss that measures the correctness of the classification of each
+  predicted bounding box: each box may contain an object class, or a
+  "background". This loss is usually called cross entropy loss
+
+  Where can I get the metrics?
+
+  `train/*` and `metrics/*`: maybe from `outputs = model()`
+
+  hyperparameters (`x/*`): maybe from optimizer
+
+  TODO tomorrow: Output everything in outputs (in
+  `trainer::train_for_one_iter`).
 
 </details>
