@@ -263,17 +263,18 @@ Tree_house, Towel, Porch, Wine_rack, Jacuzzi
 
   Missing metrics:
 
-  - [ ] `train/box_loss`
-  - [ ] `train/obj_loss`
-  - [ ] `train/cls_loss`
+  - [X] `train/loss`
+  - [X] `train/box_loss`
+  - [X] `train/obj_loss`
+  - [X] `train/cls_loss`
   - [ ] `metrics/precision`
   - [ ] `metrics/recall`
   - [ ] `val/box_loss`
   - [ ] `val/obj_loss`
   - [ ] `val/cls_loss`
-  - [ ] `x/lr0`
-  - [ ] `x/lr1`
-  - [ ] `x/lr2`
+  - [X] `x/lr0`
+  - [X] `x/lr1`
+  - [X] `x/lr2`
 
   What are dem losses?
 
@@ -292,5 +293,42 @@ Tree_house, Towel, Porch, Wine_rack, Jacuzzi
 
   TODO tomorrow: Output everything in outputs (in
   `trainer::train_for_one_iter`).
+
+</details>
+
+<details>
+
+  <summary>2021-09-13 - </summary>
+
+
+
+  Output of YOLOX each training iter:
+
+  ```
+  {
+    'total_loss': tensor(13.5224, device='cuda:0', grad_fn=<AddBackward0>),
+    'iou_loss': tensor(2.4550, device='cuda:0', grad_fn=<MulBackward0>),
+    'l1_loss': 0.0,
+    'conf_loss': tensor(7.1816, device='cuda:0', grad_fn=<DivBackward0>),
+    'cls_loss': tensor(3.8858, device='cuda:0', grad_fn=<DivBackward0>),
+    'num_fg': 5.926470588235294
+  }
+  ```
+
+  Which is the return value of `yolox/models/yolo_head.py::forward()`
+
+  ```
+  344  return loss, reg_weight * loss_iou, loss_obj, loss_cls, loss_l1, num_fg / max(num_gts, 1)
+  ```
+
+  Which in `yolox/models/yolox.py::forward()` is assigned like this:
+
+  ```
+  loss, iou_loss, conf_loss, cls_loss, l1_loss, num_fg = self.head(
+      fpn_outs, targets, x
+  )
+  ```
+
+  So, `conf_loss` from `outputs` is `loss_obj` from head's outputs.
 
 </details>
