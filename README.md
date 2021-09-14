@@ -332,3 +332,46 @@ Tree_house, Towel, Porch, Wine_rack, Jacuzzi
   So, `conf_loss` from `outputs` is `loss_obj` from head's outputs.
 
 </details>
+
+<details>
+
+  <summary>2021-09-14</summary>
+
+  **Setup validation**
+
+  Created a script to list 1 img path for each class from the validation set.
+
+  **Playing with batch size**
+
+  Bigger batch size means lower steps per epoch since we are only correcting per
+  N images with the average loss of all N images, where N is the batch size.
+
+  This means that a larger batch size means faster training, but one implication
+  that might happen is that our model can be worse and generalizing.
+
+  One strategy that I can think of is: train for larger batch size early on for
+  like 20 epochs, and then switch to a lower batch size and train for more
+  epochs and wait for the model to perform better.
+
+  I still think I need wandb to monitor experiments and provides a convenient
+  way of reloading and resuming checkpoints, since it allows us to load past
+  checkpoints from its artifact.
+
+  ---
+
+  **Batch size to number of steps per epoch**
+
+  **Batch size 32** - 112 iters/epoch, mem: 9871, avg iter time: 2.655 Average
+  forward time: 17.31 ms, Average NMS time: 4.25 ms, Average inference time:
+  21.56 ms
+
+  32 batch-size got CUDA out of mem error after the first epoch. Probs just
+  stick to lower batch num. The 64 batch-size one didn't even got to the first
+  epoch.
+
+  **Batch size 16** - 223 iter/epoch, mem: 9799Mb, avg iter time: 2.085 Average
+  forward time: 18.54 ms, Average NMS time: 4.79 ms, Average inference time:
+  23.32 ms
+
+
+</details>
