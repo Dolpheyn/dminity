@@ -2,7 +2,10 @@
 
 Train a YOLOX model to detect home amenities from images.
 
-Significance: Small model size, Fast inference time, High accuracy
+Significance: Small model size, Fast training and inference time, High accuracy (from the model's paper)
+
+Dminity is a final year university project supervised by Dr Azlin Ahmad.
+
 ## Dataset 
 
 OpenImageV6 with 30 labels for **object detection** task:
