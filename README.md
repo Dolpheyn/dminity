@@ -27,25 +27,17 @@ Tree_house, Towel, Porch, Wine_rack, Jacuzzi
   - [X] Upload to Roboflow (TODO: YOLOX requires what image size?)
   - [X] Export as link
   - [X] Use the Roboflow YOLOX training notebook to train the model
-  - [ ] Download the model and do inferences
+  - [X] Download the model and do inferences
   - [X] Setup either Weight & Biases or Tensorboard (edit the original YOLOX
     training notebook)
   - [X] Setup experiment environment with 3 variants of the YOLOX model (yolo-s,
     yolo-m, yolox)
 
-- [ ] Experiment with 10 classes (to choose a model variant)
-  - [X] Download OpenImageV6 for the 10 classes (use this
-    [notebook](https://colab.research.google.com/drive/14ISeuv3frabPFo2F-giIzZdPr2dukmLW#scrollTo=tzyrJovZPa3I))
-  - [ ] Upload to Roboflow
-  - [ ] Export as link
-  - [ ] Record the experiment result and make conclusion based on each variant's
-    pros and cons
-
 - [ ] Experiment with 200 images of all 30 classes
   - [X] Download OpenImageV6 for the all 30 classes and limit to 200 (use this
     [notebook](https://colab.research.google.com/drive/14ISeuv3frabPFo2F-giIzZdPr2dukmLW#scrollTo=tzyrJovZPa3I))
-  - [ ] Upload to Roboflow
-  - [ ] Export as link
+  - [X] Upload to Roboflow
+  - [X] Export as link
   - [ ] Record the experiment result and make conclusion based on each variant's
     pros and cons
 
@@ -57,14 +49,14 @@ Tree_house, Towel, Porch, Wine_rack, Jacuzzi
   - [ ] Validate
   - [ ] Download model
 
-- [ ] Create an MVP application (TODO)
+- [ ] Create a demo application (TODO)
 
 
 ## Log
 
 <details>
 
-  <summary>2021-08-29 - Environment setup</summary>
+  <summary>2021-08-29: Environment setup</summary>
 
   Created a
   [notebook](https://colab.research.google.com/drive/14ISeuv3frabPFo2F-giIzZdPr2dukmLW#scrollTo=tIE5_pB4IeG6)
@@ -90,7 +82,7 @@ Tree_house, Towel, Porch, Wine_rack, Jacuzzi
 
 <details>
 
-  <summary>2021-08-31 - Trained with 1 class and setup for experimentation</summary>
+  <summary>2021-08-31: Trained with 1 class and setup for experimentation</summary>
 
   Trained using the notebook with the bathtub dataset. Confirmed that 640x640 is
   the correct input size for the model.
@@ -167,7 +159,7 @@ Tree_house, Towel, Porch, Wine_rack, Jacuzzi
 
 <details>
 
-  <summary>2021-09-02 - Download 200 training images from each class</summary>
+  <summary>2021-09-02: Download 200 training images from each class</summary>
 
   08:30 -- Tried uploading the first 10 classes to roboflow with no limit (16275 train,
   1124 test, 280 validation). Browser kept going out of memory.
@@ -221,7 +213,7 @@ Tree_house, Towel, Porch, Wine_rack, Jacuzzi
 
 <details>
 
-  <summary>2021-09-07 - Setup Repository</summary>
+  <summary>2021-09-07: Setup Repository</summary>
 
    ```
    . dminity/
@@ -237,7 +229,7 @@ Tree_house, Towel, Porch, Wine_rack, Jacuzzi
 
 <details>
 
-  <summary>2021-09-08 - Explore YOLOX Code, create call graph viz</summary>
+  <summary>2021-09-08: Explore YOLOX Code, create call graph viz</summary>
 
   - [ ] Setup ~weights and biases~ tensorboard in my [fork of the YOLOX repo](https://github.com/dolpheyn/YOLOX)
 
@@ -256,7 +248,7 @@ Tree_house, Towel, Porch, Wine_rack, Jacuzzi
 
 <details>
 
-  <summary>2021-09-11 - Explore YOLOX eval code</summary>
+  <summary>2021-09-11: Explore YOLOX eval code</summary>
 
   Found where to add more scalar to tensorboard SummaryWriter (in
   `Trainer::evaluate_and_save_model`).
@@ -301,7 +293,7 @@ Tree_house, Towel, Porch, Wine_rack, Jacuzzi
 
 <details>
 
-  <summary>2021-09-13 - </summary>
+  <summary>2021-09-13: Continue with tensorboard</summary>
 
 
 
@@ -378,3 +370,36 @@ Tree_house, Towel, Porch, Wine_rack, Jacuzzi
 
 
 </details>
+
+<details>
+
+  <summary>2021-10-10 - 2021-10-16</summary>
+
+  **Literature review for FYP paper**
+    
+   Wrote chapter 1: Introduction (background of study, problem statement, research questions & objectives, scope, significance)
+
+</details>
+  
+<details>
+
+  <summary>2021-10-17 - 2021-10-23</summary>
+
+  **Literature review for FYP paper**
+    
+   Read the YOLOX paper, extracted key points: the network architecture, performance, comparisons.
+  
+   Also read the YOLO (v1) and SSD paper.
+
+</details>
+  
+<details>
+
+  <summary>2021-10-24 - 2021-10-30</summary>
+
+  **Literature review for FYP paper**
+    
+   Read the YOLOv2, RetinaNET and YOLOv3 papers (just some high level point extractions, need to go through again.)
+
+</details>
+  
