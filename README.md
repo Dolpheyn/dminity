@@ -20,7 +20,7 @@ Tree_house, Towel, Porch, Wine_rack, Jacuzzi
 
 ## Timeline
 
-- [ ] Start small: We start with the end-to-end process with only 1 label first
+- [X] Start small: We start with the end-to-end process with only 1 label first
   (Bathtub).
   - [X] Download OpenImageV6 for class Bathtub (use this
     [notebook](https://colab.research.google.com/drive/14ISeuv3frabPFo2F-giIzZdPr2dukmLW#scrollTo=tzyrJovZPa3I))
@@ -33,23 +33,15 @@ Tree_house, Towel, Porch, Wine_rack, Jacuzzi
   - [X] Setup experiment environment with 3 variants of the YOLOX model (yolo-s,
     yolo-m, yolox)
 
-- [ ] Experiment with 200 images of all 30 classes
-  - [X] Download OpenImageV6 for the all 30 classes and limit to 200 (use this
-    [notebook](https://colab.research.google.com/drive/14ISeuv3frabPFo2F-giIzZdPr2dukmLW#scrollTo=tzyrJovZPa3I))
-  - [X] Upload to Roboflow
-  - [X] Export as link
-  - [ ] Record the experiment result and make conclusion based on each variant's
+- [X] Experiment with 3 yolox size variants with 200 images of all 30 classes (for 30 epochs)
+  - [X] Record the experiment result and make conclusion based on each variant's
     pros and cons
 
-- [ ] Train with all 30 labels with the chosen model from last step
-  - [ ] Download images for all 30 classes
-  - [ ] Upload to Roboflow
-  - [ ] Export as link
-  - [ ] Train
-  - [ ] Validate
-  - [ ] Download model
+- [ ] Train selected variant for 300 epochs on base dataset
 
-- [ ] Create a demo application (TODO)
+- [ ] Train selected variant for 300 epochs on dataset after applying bag-of-freebies (from Yolov4 whitepaper)
+
+- [ ] Create a demo application
 
 
 ## Log
