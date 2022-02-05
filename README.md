@@ -37,11 +37,11 @@ Tree_house, Towel, Porch, Wine_rack, Jacuzzi
   - [X] Record the experiment result and make conclusion based on each variant's
     pros and cons
 
-- [ ] Train selected variant for 300 epochs on base dataset
+- [x] Train selected variant for 300 epochs on base dataset
 
-- [ ] Train selected variant for 300 epochs on dataset after applying bag-of-freebies (from Yolov4 whitepaper)
+- [x] Train selected variant for 300 epochs on dataset after applying bag-of-freebies (from Yolov4 whitepaper)
 
-- [ ] Create a demo application
+- [x] Create a demo application (https://huggingface.co/spaces/Dolpheyn/dminity)
 
 
 ## Log
